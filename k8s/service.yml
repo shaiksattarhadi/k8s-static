@@ -3,11 +3,15 @@ kind: Service
 metadata:
   name: k8s-static-svc
   namespace: static
+    annotations:
+    service.beta.kubernetes.io/brightbox-load-balancer-healthcheck-request: /
+
 spec:
-  selector:
+  type: LoadBalancer
+  selector: 
     app: static
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  # type: LoadBalancer
+  
