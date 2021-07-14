@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
- name: static-ing
- namespace: static
- annotations:
-   kubernetes.io/ingress.class: nginx
+  name: ing-static
+  namespace: static
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
- rules:
- - host: sw.shaiksattarhadi.com
-   http:
-     paths:
-     - backend:
-         serviceName: static-service
-         servicePort: 80
-       path: /
+  rules:
+  - host: sw.shaiksattarhadi.com
+    http:
+      paths:
+      - backend:
+          serviceName: static-service
+          servicePort: 80
+        path: /
