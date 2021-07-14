@@ -7,9 +7,7 @@ spec:
   rules:
   - host: "sw.shaiksattarhadi.com"
     http:
-      paths:
-      - pathType: 
-        path: 
+      
         backend:
           service:
             name: static-service
