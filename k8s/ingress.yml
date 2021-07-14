@@ -15,13 +15,3 @@ spec:
             name: static-service
             port:
               number: 80
-  - host: 
-    http:
-      paths:
-      - pathType: 
-        path: 
-        backend:
-          service:
-            name: 
-            port:
-              number: 
