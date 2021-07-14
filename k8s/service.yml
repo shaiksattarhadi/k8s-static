@@ -1,15 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static
+  name: static-service
   namespace: static
-  annotations:
-    service.beta.kubernetes.io/brightbox-load-balancer-healthcheck-request: /
 
 spec:
   type: LoadBalancer
   selector: 
-    app: static
+    app: k8s-static
   ports:
     - protocol: TCP
       port: 80
