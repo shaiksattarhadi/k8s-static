@@ -8,8 +8,8 @@ spec:
   - host: sw.shaiksattarhadi.com
     http:
       paths:
-      
-        path: 
+      - pathType: Prefix
+        path: "/"
         backend:
           service:
             name: static-service
