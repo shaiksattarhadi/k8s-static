@@ -1,13 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-static
-  namespace: static
+  name: host-ingress-static
 spec:
   rules:
-  - host: "sw.shaiksattarhadi.com"
+  - host: sw.shaiksattarhadi.com
     http:
-      
+      paths:
+      - pathType: Prefix
+        path: "/"
         backend:
           service:
             name: static-service
