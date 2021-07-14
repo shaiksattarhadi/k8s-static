@@ -11,6 +11,6 @@ spec:
    http:
      paths:
      - backend:
-         serviceName: myApp
+         serviceName: static-service
          servicePort: 80
        path: /
