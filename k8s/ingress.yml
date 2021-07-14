@@ -6,9 +6,12 @@ metadata:
 spec:
   rules:
   - host: sw.shaiksattarhadi.com
-    backend:
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
           service:
             name: static-service
             port:
-              number: 80 
-       
+              number: 80
