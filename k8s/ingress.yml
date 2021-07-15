@@ -1,18 +1,23 @@
-apiVersion: extensions/v1beta1 
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: ing-static
+  name: ingress
   namespace: static
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+  - hosts:
+    - sw.shaiksattarhadi.com
+    secretName: tls-secret
   rules:
   - host: sw.shaiksattarhadi.com
     http:
       paths:
-      - backend:
-          serviceName: static-service
-          servicePort: 80
-        path: /
+        - path: /apple
+          backend:
+            serviceName: static-service
+            servicePort: 80
+        
