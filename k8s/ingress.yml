@@ -16,7 +16,6 @@ spec:
   - host: sw.shaiksattarhadi.com
     http:
       paths:
-        - path: /apple
           backend:
             serviceName: service
             servicePort: 80
