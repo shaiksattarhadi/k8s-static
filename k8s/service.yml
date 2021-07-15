@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-service
+  name: service
   namespace: static
 
 spec:
   type: LoadBalancer
   selector: 
-    app: k8s-static
+    app: deployment
   ports:
     - protocol: TCP
       port: 80

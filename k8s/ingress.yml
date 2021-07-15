@@ -18,6 +18,6 @@ spec:
       paths:
         - path: /apple
           backend:
-            serviceName: static-service
+            serviceName: service
             servicePort: 80
         
