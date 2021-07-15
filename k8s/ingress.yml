@@ -8,11 +8,9 @@ metadata:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  tls:
   - hosts:
     - sw.shaiksattarhadi.com
-    secretName: tls-secret
-  rules:
+    rules:
   - host: sw.shaiksattarhadi.com
     http:
       paths:
