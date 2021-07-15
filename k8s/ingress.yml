@@ -15,7 +15,6 @@ spec:
   rules:
   - host: sw.shaiksattarhadi.com
     http:
-    https:
       backend:
         serviceName: service
         servicePort: 80
