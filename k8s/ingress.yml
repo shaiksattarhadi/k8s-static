@@ -16,4 +16,4 @@ spec:
         backend:
           serviceName: service
           servicePort: 80
-        
+     
