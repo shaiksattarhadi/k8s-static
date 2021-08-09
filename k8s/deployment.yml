@@ -1,15 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment
+  name: k8s-static
   namespace: static
-  labels:
-    app: static
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: static
+  replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -17,6 +15,6 @@ spec:
     spec:
       containers:
       - name: static
-        image: 774418219404.dkr.ecr.ca-central-1.amazonaws.com/k8s-static:1
+        image: 060920346106.dkr.ecr.us-east-2.amazonaws.com/k8s-static:1
         ports:
         - containerPort: 80

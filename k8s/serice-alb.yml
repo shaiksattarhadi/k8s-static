@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app4-svc
-  namespace: app4
+  namespace: game-2048
+  name: service-2048
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: alb
 spec:
