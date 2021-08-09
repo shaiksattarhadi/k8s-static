@@ -11,7 +11,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
  rules:
- - host: dev-static.premdesigns.in
+ - host: ds.shaiksattarhadi.com
    http:
      paths:
      - path:
