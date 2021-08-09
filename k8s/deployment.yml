@@ -6,15 +6,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: static
+      app: k8s-static-deploymant
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: static
+        app: k8s-static-deploymant
     spec:
       containers:
-      - name: static
-        image: nginx
+      - name: k8s-static-deploymant
+        image: 161676990944.dkr.ecr.ap-south-1.amazonaws.com/k8s-static:latest
         ports:
         - containerPort: 80
